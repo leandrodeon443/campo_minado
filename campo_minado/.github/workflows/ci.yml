@@ -1,0 +1,32 @@
+﻿name: .NET Build and Code Analysis
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Verifica o repositório
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      # Configura o ambiente .NET
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.x'
+
+      # Restaura dependências do projeto
+      - name: Restore dependencies
+        run: dotnet restore
+
+      # Compila o projeto e executa o analisador de código
+      - name: Run .NET Code Analysis
+        run: dotnet build --warnaserror

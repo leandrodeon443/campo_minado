@@ -73,4 +73,8 @@
 	  <Folder Include="View\" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Include=".github\workflows\ci.yml" />
+	</ItemGroup>
+
 </Project>
