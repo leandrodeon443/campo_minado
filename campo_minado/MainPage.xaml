@@ -21,6 +21,7 @@
                         TextColor="White" Margin="20,10,20,0"/>
 
                 <Button Text="Salvos"
+                        Clicked="BTN_Salvos"
                         CornerRadius="20"
                         BackgroundColor="#EEB422" FontSize="30"
                         TextColor="White" Margin="20,10,20,0"/>
